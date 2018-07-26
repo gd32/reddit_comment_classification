@@ -24,22 +24,18 @@ I used regex matching to clean the text data and used both sklearn's CountVector
 
 I fit the following classification model algorithms to predict participant status: Logistic Regression, Decision Tree, SVM, Random Forest, Bagging (with both Decision Tree and Random Forest as base classifiers), and Gradient Boosting.
 
-<<<<<<< HEAD
-To compare model strength, I looked at 3 main metrics: accuracy, sensitivity, and ROC AUC. I also timed how long each model took to fit and incorporated that into my final model selection.
-=======
-To compare model strength, I looked at 3 main metrics: accurary, sensitivity, and ROC AUC. I also timed how long each model took to fit and incorporated that into my final model selection.
->>>>>>> a2cb349b896e1bb999a7b88a038ec73f59802c51
+To compare model strength, I looked at 3 metrics: accuracy, ROC AUC, and fit time. 
 
 ## Results
 
-| Model                   	| Accuracy 	| Recall 	| ROC AUC 	| Fit Time (wall) 	|
-|-------------------------	|----------	|--------	|---------	|-----------------	|
-| Logistic Regression     	| 0.702    	| 0.714  	| 0.702   	| 0 min 46s       	|
-| Decision Tree           	| 0.704    	| 0.659  	| 0.705   	| 2 min 24s       	|
-| SVM                     	| 0.643    	| 0.699  	| 0.643   	| 21 min 14s      	|
-| Random Forest           	| 0.671    	| 0.601  	| 0.672   	| 2 min 11s       	|
-| Bagging (Decision Tree) 	| 0.772    	| 0.768  	| 0.772   	| 9 min 48s       	|
-| Bagging (Random Forest) 	| 0.760    	| 0.795  	| 0.759   	| 6 min 0s        	|
-| Gradient Boosting       	| 0.634    	| 0.694  	| 0.634   	| 17 min 48s      	|
+| Model                   | Accuracy |  ROC AUC | Fit Time |
+|-------------------------|----------|----------|----------|
+| Logistic Regression     | 0.671    | 0.552  | 0 min 46s  |     
+| Decision Tree           | 0.604    | 0.534   | 2 min 24s |      
+| SVM                     | 0.643    | 0.643   | 21 min 14s|      
+| Random Forest           | 0.671    | 0.672   | 2 min 11s |      
+| Bagging (Decision Tree) | 0.638   | 0.574  | 9 min 48s   |    
+| Bagging (Random Forest) | 0.656    | 0.543   | 6 min 0s  |      
+| Gradient Boosting       | 0.634    | 0.634   | 17 min 48s|      
 
-The bagging classifier using Random Forest as base classifier was the best mix of short processing time and high scoring in my metrics.
+The Random Forest classifier was chosen as the best mix of short processing time and high scoring in my metrics.
